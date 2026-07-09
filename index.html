@@ -227,9 +227,10 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 .anatomy .arrow{color:var(--blue);font-weight:600;margin:0 2px}
 
 /* ---------- Sheet 4: Focus on Prep ---------- */
-.shots{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;margin:26px 0 8px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 8px}
 .shot img{
-  width:100%;border-radius:2px;border:1px solid rgba(20,20,20,.24);
+  width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;
+  border-radius:2px;border:1px solid rgba(20,20,20,.24);
   box-shadow:0 3px 14px rgba(21,34,56,.14);
 }
 .shot figcaption{font-family:var(--sans);font-size:11px;color:var(--muted);margin-top:8px;line-height:1.4}
@@ -249,26 +250,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 }
 .minithesis .k{color:var(--blue);font-weight:600}
 
-/* ---------- Sheet 5: Fit ---------- */
-.jd{
-  border:3px double var(--ink);padding:26px 30px 22px;margin:28px 0 30px;
-}
-.jd .ko{
-  font-family:var(--display);font-weight:600;font-size:22px;line-height:1.5;
-  letter-spacing:0;margin-bottom:10px;
-}
-.jd .en{font-size:15.5px;color:rgba(20,20,20,.76);margin-bottom:12px;max-width:60ch}
-.jd .src{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
-.ledger{border-top:1px solid var(--ink);margin-bottom:28px}
-.ledger-row{
-  display:grid;grid-template-columns:230px 1fr;gap:24px;
-  padding:16px 0;border-bottom:1px solid var(--hairline);
-}
-.ledger-row .ask{font-size:15px;font-weight:600;line-height:1.45}
-.ledger-row .ask .tag{font-family:var(--display);display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;font-weight:600}
-.ledger-row .proof{font-size:15.5px;line-height:1.56;color:rgba(20,20,20,.82)}
-.fit-close{font-size:17.5px;line-height:1.6;max-width:64ch}
-.fit-close .q{font-weight:600;color:var(--blue)}
+/* ---------- Sign-off ---------- */
 .signoff{margin-top:36px}
 .signoff .sig{width:150px;mix-blend-mode:multiply;margin-bottom:2px}
 .signoff .who{font-family:var(--display);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -308,7 +290,6 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
   .filmstrip{grid-template-columns:repeat(3,1fr)}
   .shots{grid-template-columns:1fr}
-  .ledger-row{grid-template-columns:1fr;gap:8px}
   .close-sheet h2{font-size:30px}
 }
 
@@ -352,15 +333,12 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .station .tool{font-size:20px}
   .station .desc{font-size:13px}
   .station .num{left:calc(-15mm - 10mm + 5mm)}
-  .formats,.ledger-row .proof,.anatomy,.ownlist li{font-size:13px}
+  .formats,.anatomy,.ownlist li{font-size:13px}
   .callout p{font-size:12.5px}
   .frame figcaption{font-size:7.5px}
   .ownlist li{padding:2.6mm 0 2.6mm 22px}
   .minithesis{font-size:13px}
-  .jd .ko{font-size:19px}
-  .jd .en{font-size:13px}
-  .fit-close{font-size:14.5px}
-  .signoff{margin-top:9mm}
+  .signoff{margin-top:8mm}
   .signoff .sig{width:125px}
   .close-sheet{min-height:296mm}
   .close-sheet h2{font-size:42px}
@@ -390,7 +368,6 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
     <div class="toc-row"><span class="n">I.</span><span class="t">The Pipeline</span><span class="d">ChatGPT · Gemini · Hailuo · Suno · Figma + Adobe</span></div>
     <div class="toc-row"><span class="n">II.</span><span class="t">Proof: Blind</span><span class="d">AI-produced short-form · youtube.com/@BlindApp</span></div>
     <div class="toc-row"><span class="n">III.</span><span class="t">Proof: Focus on Prep</span><span class="d">The AI product I founded and market · focusonprep.com</span></div>
-    <div class="toc-row"><span class="n">IV.</span><span class="t">The Fit</span><span class="d">Why Wordbricks</span></div>
   </nav>
 
   <p class="contact-line">
@@ -504,54 +481,22 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 
   <div class="shots">
     <figure class="shot">
-      <img src="assets/fop_hero.png" alt="focusonprep.com live hero: dark navy page, eyebrow reading THE SAT REWARDS FOCUS, headline Focus on Prep, Get started and See pricing buttons">
-      <figcaption>The live hero. Eyebrow, headline, calls to action: every word mine.</figcaption>
+      <img src="assets/fop_dashboard.png" alt="Focus on Prep student dashboard: personalized drill recommendations, ten-day study streak, test date countdown, rank badges, and a projected SAT score">
+      <figcaption>The student dashboard, live: rank, projected score, streaks, and a personalized next move from the adaptive engine.</figcaption>
     </figure>
     <figure class="shot">
-      <img src="assets/fop_pricing.png" alt="focusonprep.com pricing section: three plans from $33 to $49 per month with a one-week free trial">
-      <figcaption>Three tiers, designed and priced by me: $33–$49/mo, one-week free trial.</figcaption>
+      <img src="assets/fop_runner.png" alt="Focus on Prep practice runner: split passage and question view with timer, answer choices, elimination mode, and Mark for Review">
+      <figcaption>The practice runner: AI-generated, human-vetted questions in a test-day interface.</figcaption>
     </figure>
   </div>
 
   <ul class="ownlist">
-    <li><strong>The product itself</strong>, developed hands-on with Claude Code, from the adaptive practice engine to the subscription flow.</li>
-    <li><strong>Every word on the site</strong>: the hero (“The SAT rewards focus”), ten feature stories, pricing copy, and a comparison table that positions the product directly against Kaplan, Princeton Review, and UWorld.</li>
+    <li><strong>The product itself</strong>, developed hands-on with Claude Code, from the adaptive practice engine to the dashboard above.</li>
     <li><strong>The AI content engine</strong>: generative AI produces the question bank at scale, with a human review gate keeping it trustworthy. “Always new, always vetted” is not a slogan; it is the architecture.</li>
-    <li><strong>The positioning</strong>: “The big names sell a fixed bank — ours keeps growing,” the comparison headline exactly as it appears on the site.</li>
+    <li><strong>Every word on the site</strong>: the hero (“The SAT rewards focus”), ten feature stories, and a comparison that positions the product directly against Kaplan, Princeton Review, and UWorld.</li>
   </ul>
 
   <p class="minithesis"><span class="k">Why it matters here:</span> this is the Wordbricks thesis in miniature. Take a formidable AI capability and make it feel simple, trustworthy, and worth paying for, in the product and in the copy that sells it.</p>
-</section>
-
-<!-- ================= SHEET 5 · FIT ================= -->
-<section class="sheet">
-  <div class="rail" aria-hidden="true"></div>
-  <span class="rail-node" style="top:64px" aria-hidden="true"></span>
-  <p class="eyebrow">IV<span class="sep">·</span>The Fit</p>
-  <h2>The role you describe is the work I have been doing.</h2>
-
-  <blockquote class="jd">
-    <p class="ko">“글로벌 인지도를 높이기 위한 창의적인 콘텐츠를 영어로 기획하고 제작”</p>
-    <p class="en">“Plan and produce creative content in English to raise global awareness.”</p>
-    <p class="src">From the Wordbricks job posting</p>
-  </blockquote>
-
-  <div class="ledger">
-    <div class="ledger-row">
-      <div class="ask"><span class="tag">You ask</span>Creative content in English, for global awareness</div>
-      <div class="proof">Four months of English short-form for a US tech audience, made from Seoul: forty-six published shorts for Blind’s official channel.</div>
-    </div>
-    <div class="ledger-row">
-      <div class="ask"><span class="tag">You value</span>Speed over perfection</div>
-      <div class="proof">Roughly three shorts each week as a team of one, on an AI pipeline built for iteration: test, read the data, and commit to what works.</div>
-    </div>
-    <div class="ledger-row">
-      <div class="ask"><span class="tag">Your mission</span>Make AI feel like something anyone can use</div>
-      <div class="proof">GetGPT has carried more than a million users from “AI is difficult” to “I built my own tool.” Focus on Prep is my daily practice in telling that same story: making an AI product feel simple, and worth paying for.</div>
-    </div>
-  </div>
-
-  <p class="fit-close"><span class="q">“AI That Works Like You Think.”</span> I already market, and live by, that promise. I would welcome the opportunity to tell it to the world in both of my native languages.</p>
 
   <div class="signoff">
     <img class="sig" src="assets/woon_signature.jpg" alt="Handwritten signature reading WOON">
