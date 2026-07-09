@@ -326,6 +326,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   }
   .sheet:last-of-type{break-after:auto}
   .sheet:first-of-type{margin-top:0}
+  .cover{padding-top:0} /* keep the band flush to the page top; .sheet's print padding would otherwise win the cascade */
   .rail{left:calc(var(--rail-w) + 5mm)}
   .rail-node,.rail-end{left:calc(var(--rail-w) + 5mm + 0.75px)}
   a{text-decoration:none}
