@@ -160,11 +160,16 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 .cover-foot{font-size:13px;color:var(--muted);margin-top:10px}
 
 /* ---------- Sheet 2: Pipeline ---------- */
-.stations{margin:34px 0 26px}
+.plabel{
+  font-family:var(--display);
+  font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--blue);margin:30px 0 0;
+}
+.stations{margin:12px 0 8px}
 .station{
   position:relative;
   display:grid;grid-template-columns:165px 92px 1fr;gap:20px;align-items:baseline;
-  padding:19px 0;border-bottom:1px solid var(--hairline);
+  padding:13px 0;border-bottom:1px solid var(--hairline);
 }
 .station:first-child{border-top:3px double var(--ink)}
 .station .num{
@@ -183,10 +188,6 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);
 }
 .station .desc{font-size:15.5px;color:rgba(20,20,20,.8);line-height:1.55}
-.pipeline-close{
-  font-family:var(--display);
-  font-size:17.5px;font-weight:500;color:var(--blue);max-width:52ch;
-}
 
 /* ---------- Sheet 3: Blind ---------- */
 .stats{
@@ -323,7 +324,8 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .frame .fmt{font-size:8px}
   .strip-caption{margin-bottom:3mm;font-size:11.5px}
   .anatomy{padding-top:3mm}
-  .station{padding:4.2mm 0}
+  .station{padding:2.8mm 0}
+  .plabel{font-size:11px;margin:6mm 0 0}
   .station .tool{font-size:20px}
   .station .desc{font-size:13px}
   .station .num{left:calc(-15mm - 10mm + 5mm)}
@@ -355,11 +357,11 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
     <p class="role">Content Marketer · Bilingual EN / KO · Seoul</p>
   </div>
 
-  <p class="thesis">Two shipped projects, <em>one AI toolchain.</em></p>
+  <p class="thesis">Two shipped projects, <em>each with its own AI pipeline.</em></p>
   <p class="thesis-sub">A 46-short video series for Blind’s official channel, and Focus on Prep, a Digital SAT practice product I built and run.</p>
 
   <nav class="toc" aria-label="Contents">
-    <div class="toc-row"><span class="n">I.</span><span class="t">The Pipeline</span><span class="d">ChatGPT · Gemini · Hailuo · Suno · Figma + Adobe</span></div>
+    <div class="toc-row"><span class="n">I.</span><span class="t">The Pipelines</span><span class="d">One for video, one for questions</span></div>
     <div class="toc-row"><span class="n">II.</span><span class="t">Proof: Blind</span><span class="d">AI-produced short-form · youtube.com/@BlindApp</span></div>
     <div class="toc-row"><span class="n">III.</span><span class="t">Proof: Focus on Prep</span><span class="d">The AI product I founded and market · focusonprep.com</span></div>
   </nav>
@@ -373,9 +375,11 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 <!-- ================= SHEET 2 · PIPELINE ================= -->
 <section class="sheet">
   <div class="rail" aria-hidden="true"></div>
-  <p class="eyebrow">I<span class="sep">·</span>The Pipeline</p>
-  <h2>Five tools, one process.</h2>
-  <p class="lead">Every Blind short went through the same five steps. The tools did the production; the decisions were mine.</p>
+  <p class="eyebrow">I<span class="sep">·</span>The Pipelines</p>
+  <h2>Each project runs its own AI pipeline.</h2>
+  <p class="lead">The Blind shorts and the Focus on Prep question bank run separate loops. The tools differ; the pattern is the same: AI does the production, and the decisions are mine.</p>
+
+  <p class="plabel">Video · The Blind Shorts</p>
 
   <div class="stations">
     <div class="station">
@@ -405,7 +409,34 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
     </div>
   </div>
 
-  <p class="pipeline-close">This pipeline let one person publish about three shorts a week.</p>
+  <p class="plabel">Questions · Focus on Prep</p>
+  <div class="stations">
+    <div class="station">
+      <span class="num">I</span>
+      <span class="tool">Generate</span><span class="verb">Claude</span>
+      <span class="desc">Question drafts written to College Board specifications.</span>
+    </div>
+    <div class="station">
+      <span class="num">II</span>
+      <span class="tool">Verify</span><span class="verb">Claude</span>
+      <span class="desc">A second agent scores every draft across six dimensions.</span>
+    </div>
+    <div class="station">
+      <span class="num">III</span>
+      <span class="tool">Revise</span><span class="verb">Claude</span>
+      <span class="desc">Failing drafts are corrected and re-verified, up to two cycles.</span>
+    </div>
+    <div class="station">
+      <span class="num">IV</span>
+      <span class="tool">Judge</span><span class="verb">Claude</span>
+      <span class="desc">Approved questions receive a difficulty rating for the adaptive engine.</span>
+    </div>
+    <div class="station">
+      <span class="num">V</span>
+      <span class="tool">Publish</span><span class="verb">Human</span>
+      <span class="desc">I review the final set and publish it; the bank keeps growing.</span>
+    </div>
+  </div>
 </section>
 
 <!-- ================= SHEET 3 · BLIND ================= -->
@@ -478,7 +509,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 
   <ul class="ownlist">
     <li><strong>Product</strong>: built with Claude Code, from the adaptive practice engine to the dashboard above.</li>
-    <li><strong>Question bank</strong>: AI-generated at scale, human-reviewed before release, and continuously growing.</li>
+    <li><strong>Question bank</strong>: generated, verified, and revised by Claude agents; reviewed by me before release; continuously growing.</li>
     <li><strong>Site copy</strong>: written by me, from the hero (“The SAT rewards focus”) to the comparison against Kaplan, Princeton Review, and UWorld.</li>
   </ul>
 
