@@ -204,7 +204,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 .callout .k{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:6px}
 .callout p{font-size:15px;line-height:1.58;color:rgba(20,20,20,.84)}
 .filmstrip{
-  display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:10px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:10px;
 }
 .frame{display:block}
 .frame img{
@@ -215,6 +215,11 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 .frame figcaption{
   font-family:var(--sans);
   font-size:9.5px;line-height:1.35;color:var(--muted);margin-top:6px;font-weight:500;
+}
+.frame .fmt{
+  display:block;font-family:var(--display);
+  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:2px;
 }
 .strip-caption{font-size:14px;color:var(--muted);margin-bottom:22px}
 .strip-caption a{font-weight:600}
@@ -288,7 +293,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:none}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
-  .filmstrip{grid-template-columns:repeat(3,1fr)}
+  .filmstrip{grid-template-columns:repeat(2,1fr)}
   .shots{grid-template-columns:1fr}
   .close-sheet h2{font-size:30px}
 }
@@ -320,15 +325,16 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .toc{margin-bottom:9mm}
   .toc-row{font-size:13.5px}
   h2{font-size:32px}
-  p.lead{font-size:14px;max-width:68ch}
-  .stats{margin:5mm 0}
-  .stat{padding:3.5mm 4mm 3mm}
-  .stat .v{font-size:29px}
-  .formats{margin-bottom:4mm}
-  .callout{margin-bottom:5mm;padding:3.5mm 5mm}
-  .filmstrip{gap:8px}
-  .strip-caption{margin-bottom:4mm;font-size:12px}
-  .anatomy{padding-top:3.5mm}
+  p.lead{font-size:13.5px;max-width:70ch}
+  .stats{margin:4mm 0}
+  .stat{padding:3mm 4mm 2.5mm}
+  .stat .v{font-size:28px}
+  .formats{margin-bottom:2.5mm}
+  .callout{margin-bottom:3.5mm;padding:3mm 5mm}
+  .filmstrip{gap:8px;width:66%}
+  .frame .fmt{font-size:8px}
+  .strip-caption{margin-bottom:3mm;font-size:11.5px}
+  .anatomy{padding-top:3mm}
   .station{padding:4.2mm 0}
   .station .tool{font-size:20px}
   .station .desc{font-size:13px}
@@ -426,12 +432,12 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 
   <div class="stats">
     <div class="stat"><div class="v">46</div><div class="l">Shorts published</div></div>
-    <div class="stat"><div class="v">8</div><div class="l">Named formats</div></div>
+    <div class="stat"><div class="v">4</div><div class="l">Named formats</div></div>
     <div class="stat"><div class="v">~3</div><div class="l">Per week</div></div>
     <div class="stat"><div class="v">1</div><div class="l">Person</div></div>
   </div>
 
-  <p class="formats">I did not simply post videos; I built formats: <strong>Blind Meme</strong> (tech-culture sketches), <strong>Beats by Blind</strong> (original parody music via Suno), <strong>Blind Choice</strong> (interactive polls), <strong>Blind POV</strong> (workplace confessions). Eight repeatable series meant that every trend had a template waiting.</p>
+  <p class="formats">I did not simply post videos; I built formats: <strong>Blind Meme</strong> (tech-culture sketches), <strong>Beats by Blind</strong> (original parody music via Suno), <strong>Blind Choice</strong> (interactive polls), <strong>Blind POV</strong> (workplace confessions). Four repeatable series meant that every trend had a template waiting.</p>
 
   <div class="callout">
     <span class="k">Guided by the data</span>
@@ -440,31 +446,23 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 
   <div class="filmstrip">
     <figure class="frame">
-      <a href="https://www.youtube.com/shorts/asKabj7ruqI"><img src="assets/yt_asKabj7ruqI.jpg" alt="Thumbnail: How to raise productivity, a Blind Meme short"></a>
-      <figcaption>How to raise productivity? 😐</figcaption>
+      <a href="https://www.youtube.com/shorts/asKabj7ruqI"><img src="assets/yt_asKabj7ruqI.jpg" alt="Thumbnail: How to raise productivity, the most-watched Blind Meme short"></a>
+      <figcaption><span class="fmt">Blind Meme</span>How to raise productivity? 😐</figcaption>
     </figure>
     <figure class="frame">
-      <a href="https://www.youtube.com/shorts/5cngVm6mpZA"><img src="assets/yt_5cngVm6mpZA.jpg" alt="Thumbnail: The Audition, AI Edition, a Blind Meme short"></a>
-      <figcaption>The Audition (AI Edition) 🐈</figcaption>
+      <a href="https://www.youtube.com/shorts/UE3Z9d2uLq8"><img src="assets/yt_UE3Z9d2uLq8.jpg" alt="Thumbnail: Charlie Kirk Assassinated Comment Music, the most-watched Beats by Blind short"></a>
+      <figcaption><span class="fmt">Beats by Blind</span>Charlie Kirk Assassinated (Comment Music)</figcaption>
     </figure>
     <figure class="frame">
-      <a href="https://www.youtube.com/shorts/XzNpAWPbIcs"><img src="assets/yt_XzNpAWPbIcs.jpg" alt="Thumbnail: Tech Workers in 2025, a Blind Meme short"></a>
-      <figcaption>Tech Workers in 2025 😐</figcaption>
+      <a href="https://www.youtube.com/shorts/-UDw4PLLnjE"><img src="assets/yt_-UDw4PLLnjE.jpg" alt="Thumbnail: Which Company Would You Work For, the most-watched Blind Choice short"></a>
+      <figcaption><span class="fmt">Blind Choice</span>Which Company Would You Work For? 🏢</figcaption>
     </figure>
     <figure class="frame">
-      <a href="https://www.youtube.com/shorts/CMEPuLQ9EL0"><img src="assets/yt_CMEPuLQ9EL0.jpg" alt="Thumbnail: Recruiter offers 20% more pay, but it's 2025, a Blind Meme short"></a>
-      <figcaption>Recruiter offers 20% more pay… 😬</figcaption>
-    </figure>
-    <figure class="frame">
-      <a href="https://www.youtube.com/shorts/iGOPxGJNmjE"><img src="assets/yt_iGOPxGJNmjE.jpg" alt="Thumbnail: How Prompt Injection Works, a Blind Meme short"></a>
-      <figcaption>How Prompt Injection Works 🐰</figcaption>
-    </figure>
-    <figure class="frame">
-      <a href="https://www.youtube.com/shorts/SUkvJkf-6wY"><img src="assets/yt_SUkvJkf-6wY.jpg" alt="Thumbnail: AWS Outage? AI Has Your Back, a Blind Meme short"></a>
-      <figcaption>AWS Outage? AI Has Your Back(?)</figcaption>
+      <a href="https://www.youtube.com/shorts/HKI8ADNM_Wc"><img src="assets/yt_HKI8ADNM_Wc.jpg" alt="Thumbnail: He saw more than my resume, the most-watched Blind POV short"></a>
+      <figcaption><span class="fmt">Blind POV</span>He saw more than my résumé 😳</figcaption>
     </figure>
   </div>
-  <p class="strip-caption">The six most-watched of the forty-six, all from the <strong>Blind Meme</strong> series. The complete set is available at <a href="https://www.youtube.com/@BlindApp/shorts">youtube.com/@BlindApp</a>.<br><span class="ip-note">Videos and thumbnails © Teamblind Inc., shown with attribution as samples of my own work.</span></p>
+  <p class="strip-caption">The most-watched short from each of the four formats. The complete set of forty-six is available at <a href="https://www.youtube.com/@BlindApp/shorts">youtube.com/@BlindApp</a>.<br><span class="ip-note">Videos and thumbnails © Teamblind Inc., shown with attribution as samples of my own work.</span></p>
 
   <p class="anatomy"><span class="k">Anatomy of one short, “The Audition (AI Edition)”:</span> the premise written with ChatGPT <span class="arrow">→</span> the cast rendered with Gemini <span class="arrow">→</span> motion added with Hailuo <span class="arrow">→</span> the score composed with Suno <span class="arrow">→</span> cut and captioned in Figma and Adobe.</p>
 </section>
