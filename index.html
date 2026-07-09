@@ -114,6 +114,7 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 /* ---------- Sheet 1: Cover ---------- */
 .cover{padding-top:0;text-align:center}
 .cover-band{
+  position:relative;z-index:2; /* paint above the absolutely-positioned rail */
   margin:0 -64px 52px calc(-1 * (var(--rail-w) + 64px));
   background:var(--dark);color:#F0EDE7;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
