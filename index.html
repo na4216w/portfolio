@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woon Jae Na — Content Portfolio</title>
+<meta name="description" content="Content portfolio of Woon Jae Na — AI-native content marketer. One AI pipeline, two shipped proofs: 46 shorts for Blind and Focus on Prep, an AI product he founded.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232563EB'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23FAF7F2' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<style>
+/* ---------- Fonts (local, no CDN) ---------- */
+@font-face{
+  font-family:'Fraunces';
+  src:url('assets/fonts/fraunces-latin.woff2') format('woff2');
+  font-weight:600 700;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Fraunces';
+  src:url('assets/fonts/fraunces-latin-ext.woff2') format('woff2');
+  font-weight:600 700;font-style:normal;font-display:swap;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0;
+}
+@font-face{
+  font-family:'Inter';
+  src:url('assets/fonts/inter-latin.woff2') format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Inter';
+  src:url('assets/fonts/inter-latin-ext.woff2') format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0;
+}
+
+/* ---------- Tokens ---------- */
+:root{
+  --paper:#FAF7F2;
+  --ink:#111111;
+  --blue:#2563EB;
+  --sky:#93C5FD;
+  --dark:#111318;
+  --hairline:rgba(17,17,17,.14);
+  --muted:rgba(17,17,17,.62);
+  --display:'Fraunces',Georgia,'Apple SD Gothic Neo','Malgun Gothic',serif;
+  --body:'Inter',-apple-system,'Helvetica Neue','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --rail-w:56px;
+}
+
+/* ---------- Base ---------- */
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:#EFEAE2;
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15px;line-height:1.6;
+  font-feature-settings:'ss01' on;
+}
+img{display:block;max-width:100%}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+strong{font-weight:700}
+
+/* ---------- Sheet ---------- */
+.sheet{
+  position:relative;
+  background:var(--paper);
+  max-width:900px;
+  margin:0 auto 28px;
+  padding:64px 64px 56px calc(var(--rail-w) + 64px);
+  box-shadow:0 1px 2px rgba(17,17,17,.06),0 12px 40px rgba(17,17,17,.07);
+}
+.sheet:first-of-type{margin-top:28px}
+.sheet--dark{background:var(--dark);color:#F2F0EC}
+
+/* ---------- Production-line rail (signature element) ---------- */
+.rail{
+  position:absolute;top:0;bottom:0;left:calc(var(--rail-w) + 24px);
+  width:2px;background:var(--blue);opacity:.9;
+}
+.rail::before{ /* entry node */
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:2px;height:100%;
+}
+.rail-node{
+  position:absolute;left:calc(var(--rail-w) + 25px);transform:translateX(-50%);
+  width:11px;height:11px;border-radius:50%;
+  background:var(--paper);border:2.5px solid var(--blue);
+  z-index:2;
+}
+.sheet--dark .rail-node{background:var(--dark)}
+.rail-end{ /* terminal stop on last page */
+  position:absolute;left:calc(var(--rail-w) + 25px);transform:translateX(-50%);
+  width:15px;height:15px;background:var(--blue);border-radius:2px;z-index:2;
+}
+
+/* ---------- Utility type ---------- */
+.eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;
+}
+.eyebrow .sep{color:var(--muted);font-weight:400;margin:0 6px}
+h2{
+  font-family:var(--display);font-weight:700;
+  font-size:38px;line-height:1.12;letter-spacing:-.015em;
+  margin-bottom:10px;
+  font-variation-settings:'opsz' 90;
+}
+.meta{
+  font-size:13px;color:var(--muted);font-weight:500;margin-bottom:22px;
+}
+.meta a{font-weight:600}
+p.lead{font-size:16px;line-height:1.65;max-width:62ch}
+
+/* ---------- Sheet 1: Cover ---------- */
+.cover{padding-top:0}
+.cover-band{
+  margin:0 -64px 56px calc(-1 * (var(--rail-w) + 64px));
+  background:var(--dark);color:#F2F0EC;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:18px 64px;
+  font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+}
+.cover-band .r{color:var(--sky)}
+.sig{width:300px;mix-blend-mode:multiply;margin:26px 0 6px -10px}
+.cover h1{
+  font-family:var(--display);font-weight:700;
+  font-size:64px;line-height:1.02;letter-spacing:-.02em;
+  font-variation-settings:'opsz' 144;
+}
+.cover .role{
+  font-size:14px;font-weight:500;color:var(--muted);
+  margin:14px 0 44px;letter-spacing:.01em;
+}
+.thesis{
+  font-family:var(--display);font-weight:600;
+  font-size:27px;line-height:1.3;letter-spacing:-.01em;
+  max-width:21em;margin-bottom:14px;
+}
+.thesis em{font-style:normal;color:var(--blue)}
+.thesis-sub{font-size:15px;color:var(--muted);max-width:56ch;margin-bottom:52px}
+.toc{border-top:1.5px solid var(--ink);margin-bottom:44px}
+.toc-row{
+  display:flex;align-items:baseline;gap:18px;
+  padding:13px 0;border-bottom:1px solid var(--hairline);
+  font-size:14px;
+}
+.toc-row .n{font-weight:700;color:var(--blue);font-size:12px;min-width:22px}
+.toc-row .t{font-weight:600;flex:1}
+.toc-row .d{font-size:12px;color:var(--muted)}
+.contact-line{font-size:13px;color:var(--muted)}
+.contact-line a{font-weight:600}
+.contact-line .dot{margin:0 8px;color:var(--hairline)}
+.cover-foot{font-size:11.5px;color:var(--muted);margin-top:8px}
+
+/* ---------- Sheet 2: Pipeline ---------- */
+.stations{margin:34px 0 26px}
+.station{
+  position:relative;
+  display:grid;grid-template-columns:150px 96px 1fr;gap:20px;align-items:baseline;
+  padding:19px 0;border-bottom:1px solid var(--hairline);
+}
+.station:first-child{border-top:1.5px solid var(--ink)}
+.station .num{
+  position:absolute;left:calc(-1 * (64px) - 14px);top:50%;transform:translate(-50%,-50%);
+  width:28px;height:28px;border-radius:50%;
+  background:var(--blue);color:#fff;
+  font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;
+}
+.station .tool{
+  font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.01em;
+}
+.station .verb{
+  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);
+}
+.station .desc{font-size:14px;color:rgba(17,17,17,.78);line-height:1.55}
+.pipeline-close{
+  font-size:15px;font-weight:600;color:var(--blue);max-width:48ch;
+}
+
+/* ---------- Sheet 3: Blind ---------- */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1.5px solid var(--ink);margin:26px 0;
+}
+.stat{padding:16px 18px 14px;border-right:1px solid var(--hairline)}
+.stat:last-child{border-right:none}
+.stat .v{font-family:var(--display);font-weight:700;font-size:34px;line-height:1;letter-spacing:-.02em}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.formats{font-size:14px;color:rgba(17,17,17,.78);max-width:70ch;margin-bottom:18px}
+.callout{
+  border-left:3px solid var(--blue);background:rgba(37,99,235,.055);
+  padding:14px 18px;margin-bottom:26px;max-width:72ch;
+}
+.callout .k{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:5px}
+.callout p{font-size:13.5px;line-height:1.55;color:rgba(17,17,17,.82)}
+.filmstrip{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:10px;
+}
+.frame{display:block}
+.frame img{
+  width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;
+  border:1px solid var(--hairline);
+}
+.frame:hover img{outline:2px solid var(--blue);outline-offset:-2px}
+.frame figcaption{
+  font-size:10px;line-height:1.35;color:var(--muted);margin-top:6px;font-weight:500;
+}
+.strip-caption{font-size:12px;color:var(--muted);margin-bottom:24px}
+.strip-caption a{font-weight:600}
+.anatomy{
+  border-top:1.5px solid var(--ink);padding-top:14px;
+  font-size:13.5px;line-height:1.6;color:rgba(17,17,17,.82);max-width:76ch;
+}
+.anatomy .k{font-weight:700;color:var(--ink)}
+.anatomy .arrow{color:var(--blue);font-weight:700;margin:0 2px}
+
+/* ---------- Sheet 4: Focus on Prep ---------- */
+.shots{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;margin:26px 0 8px}
+.shot img{
+  width:100%;border-radius:8px;border:1px solid rgba(17,17,17,.22);
+  box-shadow:0 6px 22px rgba(17,17,19,.18);
+}
+.shot figcaption{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.4}
+.ownlist{list-style:none;margin:22px 0 24px}
+.ownlist li{
+  position:relative;padding:10px 0 10px 22px;
+  border-bottom:1px solid var(--hairline);
+  font-size:14px;line-height:1.55;color:rgba(17,17,17,.8);max-width:76ch;
+}
+.ownlist li::before{
+  content:'';position:absolute;left:2px;top:17px;
+  width:7px;height:7px;background:var(--blue);border-radius:1.5px;
+}
+.minithesis{
+  background:var(--dark);color:#F2F0EC;border-radius:8px;
+  padding:20px 24px;font-size:14.5px;line-height:1.6;max-width:78ch;
+}
+.minithesis .k{color:var(--sky);font-weight:700}
+
+/* ---------- Sheet 5: Fit ---------- */
+.jd{
+  border:1.5px solid var(--ink);padding:26px 28px 22px;margin:28px 0 30px;
+}
+.jd .ko{
+  font-family:var(--display);font-weight:600;font-size:21px;line-height:1.45;
+  letter-spacing:-.005em;margin-bottom:10px;
+}
+.jd .en{font-size:14px;color:rgba(17,17,17,.75);margin-bottom:12px;max-width:60ch}
+.jd .src{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.ledger{border-top:1.5px solid var(--ink);margin-bottom:28px}
+.ledger-row{
+  display:grid;grid-template-columns:220px 1fr;gap:24px;
+  padding:16px 0;border-bottom:1px solid var(--hairline);
+}
+.ledger-row .ask{font-size:13px;font-weight:700;line-height:1.45}
+.ledger-row .ask .tag{display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;font-weight:700}
+.ledger-row .proof{font-size:14px;line-height:1.55;color:rgba(17,17,17,.8)}
+.fit-close{font-size:15.5px;line-height:1.6;max-width:66ch}
+.fit-close .q{font-weight:700;color:var(--blue)}
+
+/* ---------- Sheet 6: Close ---------- */
+.close-sheet{display:flex;flex-direction:column;justify-content:space-between;min-height:560px}
+.close-sheet h2{font-size:46px;max-width:12em;color:#F2F0EC;margin-top:26px}
+.close-sheet h2 .b{color:var(--sky)}
+.close-id{font-size:14px;color:rgba(242,240,236,.75);margin-top:18px}
+.close-contact{border-top:1px solid rgba(242,240,236,.22);padding-top:22px}
+.close-contact .row{font-size:15px;margin-bottom:6px}
+.close-contact a{color:var(--sky);font-weight:600}
+.close-contact .dot{margin:0 9px;color:rgba(242,240,236,.3)}
+.close-meta{font-size:11.5px;color:rgba(242,240,236,.45);margin-top:26px}
+
+/* ---------- Reveal (screen-only, added by JS) ---------- */
+.will-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.will-reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive (screen only — must never leak into print) ---------- */
+@media screen and (max-width:760px){
+  :root{--rail-w:10px}
+  .sheet{padding:44px 24px 44px calc(var(--rail-w) + 34px);margin-bottom:16px}
+  .rail{left:calc(var(--rail-w) + 8px)}
+  .rail-node,.rail-end{left:calc(var(--rail-w) + 9px)}
+  .cover-band{margin:0 -24px 40px calc(-1 * (var(--rail-w) + 34px));padding:14px 24px;font-size:9.5px}
+  .cover h1{font-size:44px}
+  .sig{width:220px}
+  .thesis{font-size:22px}
+  h2{font-size:29px}
+  .station{grid-template-columns:1fr;gap:4px;padding-left:26px}
+  .station .num{left:-24px;width:24px;height:24px;font-size:11px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
+  .filmstrip{grid-template-columns:repeat(3,1fr)}
+  .shots{grid-template-columns:1fr}
+  .ledger-row{grid-template-columns:1fr;gap:8px}
+  .close-sheet h2{font-size:32px}
+}
+
+/* ---------- Print: six A4 sheets ---------- */
+@media print{
+  @page{size:A4;margin:0}
+  html,body{background:#fff}
+  body{font-size:12px}
+  .sheet{
+    width:210mm;min-height:296mm;max-width:none;
+    margin:0;box-shadow:none;
+    padding:15mm 15mm 13mm calc(var(--rail-w) + 15mm);
+    break-after:page;break-inside:avoid;
+    print-color-adjust:exact;-webkit-print-color-adjust:exact;
+  }
+  .sheet:last-of-type{break-after:auto}
+  .sheet:first-of-type{margin-top:0}
+  .rail{left:calc(var(--rail-w) + 5mm)}
+  .rail-node,.rail-end{left:calc(var(--rail-w) + 5mm + 1px)}
+  a{text-decoration:none}
+  .will-reveal{opacity:1 !important;transform:none !important;transition:none}
+  /* scale type modestly for A4 */
+  .cover-band{margin:0 -15mm 12mm calc(-1 * (var(--rail-w) + 15mm));padding:6mm 15mm;font-size:9px}
+  .cover h1{font-size:52px}
+  .sig{width:240px}
+  .thesis{font-size:23px}
+  .thesis-sub{margin-bottom:11mm}
+  .cover .role{margin-bottom:10mm}
+  .toc{margin-bottom:10mm}
+  h2{font-size:31px}
+  p.lead{font-size:13px}
+  .stat .v{font-size:27px}
+  .station{padding:4.2mm 0}
+  .station .tool{font-size:18px}
+  .station .desc{font-size:12px}
+  .station .num{left:calc(-15mm - 10mm + 5mm);}
+  .formats,.ledger-row .proof{font-size:12px}
+  .callout p{font-size:11.5px}
+  .frame figcaption{font-size:7.5px}
+  .anatomy{font-size:11.5px}
+  .ownlist li{font-size:12px;padding:2.6mm 0 2.6mm 22px}
+  .minithesis{font-size:12px}
+  .jd .ko{font-size:18px}
+  .jd .en{font-size:12px}
+  .close-sheet{min-height:296mm}
+  .close-sheet h2{font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= SHEET 1 · COVER ================= -->
+<section class="sheet cover">
+  <div class="rail" aria-hidden="true"></div>
+  <span class="rail-node" style="top:170px" aria-hidden="true"></span>
+  <div class="cover-band">
+    <span>Content Portfolio — Selected Work · 2026</span>
+    <span class="r">For Wordbricks · Brand Content Planner / Content Marketer</span>
+  </div>
+
+  <img class="sig" src="assets/woon_signature.jpg" alt="Handwritten signature reading WOON">
+  <h1>WOON JAE NA</h1>
+  <p class="role">Content Marketer · Bilingual EN / KO · AI-native creator</p>
+
+  <p class="thesis">I don't just use AI tools — <em>I run a production system on them.</em></p>
+  <p class="thesis-sub">One pipeline, two shipped proofs: a 46-short video series for Blind's official channel, and an AI product I founded and run.</p>
+
+  <nav class="toc" aria-label="Contents">
+    <div class="toc-row"><span class="n">01</span><span class="t">The Pipeline</span><span class="d">ChatGPT · Gemini · Higgsfield · Suno · Figma+Adobe</span></div>
+    <div class="toc-row"><span class="n">02</span><span class="t">Proof — Blind</span><span class="d">AI-produced short-form · youtube.com/@BlindApp</span></div>
+    <div class="toc-row"><span class="n">03</span><span class="t">Proof — Focus on Prep</span><span class="d">AI product I founded &amp; market · focusonprep.com</span></div>
+    <div class="toc-row"><span class="n">04</span><span class="t">The Fit</span><span class="d">Why Wordbricks</span></div>
+  </nav>
+
+  <p class="contact-line">
+    <a href="mailto:wjna4216@gmail.com">wjna4216@gmail.com</a> <span class="dot">·</span> +82 10-7163-5363 <span class="dot">·</span> <a href="https://focusonprep.com">focusonprep.com</a> <span class="dot">·</span> <a href="https://www.youtube.com/@BlindApp">youtube.com/@BlindApp</a>
+  </p>
+  <p class="cover-foot">All work is real and live — every link is clickable.</p>
+</section>
+
+<!-- ================= SHEET 2 · PIPELINE ================= -->
+<section class="sheet">
+  <div class="rail" aria-hidden="true"></div>
+  <p class="eyebrow">01<span class="sep">/</span>The System</p>
+  <h2>One idea in. One posted short out.<br>Five stations in between.</h2>
+  <p class="lead">Every Blind short ran the same relay. Each tool does the one thing it's best at; I do the judgment in between — the brief, the taste, the final cut.</p>
+
+  <div class="stations">
+    <div class="station">
+      <span class="num">1</span>
+      <span class="tool">ChatGPT</span><span class="verb">Write</span>
+      <span class="desc">Scripts, hooks, captions, copy — drafted, punched up, and A/B-tested in minutes, not days.</span>
+    </div>
+    <div class="station">
+      <span class="num">2</span>
+      <span class="tool">Google Gemini</span><span class="verb">Visualize</span>
+      <span class="desc">Characters, frames, and thumbnails, generated to a brief — with looks that stay consistent across a series.</span>
+    </div>
+    <div class="station">
+      <span class="num">3</span>
+      <span class="tool">Higgsfield</span><span class="verb">Animate</span>
+      <span class="desc">Stills become cinema. Camera-controlled AI video — dolly, orbit, crane — picking the best of today's video models for each shot.</span>
+    </div>
+    <div class="station">
+      <span class="num">4</span>
+      <span class="tool">Suno</span><span class="verb">Score</span>
+      <span class="desc">Original music and audio hooks: jingles, parody tracks, and full “Beats by Blind” songs written to the script.</span>
+    </div>
+    <div class="station">
+      <span class="num">5</span>
+      <span class="tool">Figma + Adobe</span><span class="verb">Finish</span>
+      <span class="desc">Captions, timing, assembly — the human 10% that makes the AI 90% feel intentional. (Adobe Certified Professional ×2)</span>
+    </div>
+  </div>
+
+  <p class="pipeline-close">The point isn't the tools — it's that the system let one person ship like a team.</p>
+</section>
+
+<!-- ================= SHEET 3 · BLIND ================= -->
+<section class="sheet">
+  <div class="rail" aria-hidden="true"></div>
+  <span class="rail-node" style="top:64px" aria-hidden="true"></span>
+  <p class="eyebrow">02<span class="sep">/</span>Proof · Short-form video</p>
+  <h2>46 shorts in four months, solo — for a crowd that hates ads.</h2>
+  <p class="meta">Teamblind — US Growth Intern · Aug–Nov 2025 · <a href="https://www.youtube.com/@BlindApp/shorts">youtube.com/@BlindApp/shorts ↗</a></p>
+
+  <p class="lead">Blind is where 9M+ verified professionals talk salaries, layoffs, and everything HR can't hear. My job: make Blind's official channels feel native to that crowd — funny, fast, worth sharing. Using the pipeline on the previous page, I wrote, produced, and shipped 46 YouTube Shorts in four months — about three a week, as a team of one.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="v">46</div><div class="l">Shorts shipped</div></div>
+    <div class="stat"><div class="v">8</div><div class="l">Named formats</div></div>
+    <div class="stat"><div class="v">~3</div><div class="l">Per week</div></div>
+    <div class="stat"><div class="v">1</div><div class="l">Person</div></div>
+  </div>
+
+  <p class="formats">I didn't post videos; I built formats: <strong>Blind Meme</strong> (tech-culture skits), <strong>Beats by Blind</strong> (original parody tracks via Suno), <strong>Blind Choice</strong> (this-or-that polls), <strong>Blind POV</strong> (workplace confessions) — eight repeatable series, so every trend had a template ready.</p>
+
+  <div class="callout">
+    <span class="k">Read the data, double down</span>
+    <p>AI-newsjacking memes — “When ChatGPT Is Down,” “How Prompt Injection Works,” “AWS Outage? AI Has Your Back(?)” — kept rising to the top of the channel, so the calendar shifted toward same-week AI news. Speed over perfection, measured weekly.</p>
+  </div>
+
+  <div class="filmstrip">
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/asKabj7ruqI"><img src="assets/yt_asKabj7ruqI.jpg" alt="Thumbnail: How to raise productivity — Blind Meme short"></a>
+      <figcaption>How to raise productivity? 😐</figcaption>
+    </figure>
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/5cngVm6mpZA"><img src="assets/yt_5cngVm6mpZA.jpg" alt="Thumbnail: The Audition, AI Edition — Blind Meme short"></a>
+      <figcaption>The Audition (AI Edition) 🐈</figcaption>
+    </figure>
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/XzNpAWPbIcs"><img src="assets/yt_XzNpAWPbIcs.jpg" alt="Thumbnail: Tech Workers in 2025 — Blind Meme short"></a>
+      <figcaption>Tech Workers in 2025 😐</figcaption>
+    </figure>
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/iGOPxGJNmjE"><img src="assets/yt_iGOPxGJNmjE.jpg" alt="Thumbnail: How Prompt Injection Works — Blind Meme short"></a>
+      <figcaption>How Prompt Injection Works 🐰</figcaption>
+    </figure>
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/lwDCwJi8AyA"><img src="assets/yt_lwDCwJi8AyA.jpg" alt="Thumbnail: When ChatGPT Is Down — Blind Meme short"></a>
+      <figcaption>When ChatGPT Is Down 😭</figcaption>
+    </figure>
+    <figure class="frame">
+      <a href="https://www.youtube.com/shorts/SUkvJkf-6wY"><img src="assets/yt_SUkvJkf-6wY.jpg" alt="Thumbnail: AWS Outage? AI Has Your Back — Blind Meme short"></a>
+      <figcaption>AWS Outage? AI Has Your Back(?)</figcaption>
+    </figure>
+  </div>
+  <p class="strip-caption">Six of 46 — the AI-newsjacking hits from the <strong>Blind Meme</strong> series. All 46 live at <a href="https://www.youtube.com/@BlindApp/shorts">youtube.com/@BlindApp</a>.</p>
+
+  <p class="anatomy"><span class="k">Anatomy of one short — “The Audition (AI Edition)”:</span> ChatGPT wrote the gag <span class="arrow">→</span> Gemini rendered the cast <span class="arrow">→</span> Higgsfield gave it motion <span class="arrow">→</span> Suno scored it <span class="arrow">→</span> Figma/Adobe cut and captioned it. Start to posted: fast.</p>
+</section>
+
+<!-- ================= SHEET 4 · FOCUS ON PREP ================= -->
+<section class="sheet">
+  <div class="rail" aria-hidden="true"></div>
+  <span class="rail-node" style="top:64px" aria-hidden="true"></span>
+  <p class="eyebrow">03<span class="sep">/</span>Proof · AI product + marketing</p>
+  <h2>Then I founded an AI product — and wrote every word that sells it.</h2>
+  <p class="meta">Focus Studio — Founder · Feb 2026–present · <a href="https://focusonprep.com">focusonprep.com ↗</a> · live product</p>
+
+  <p class="lead">Focus on Prep is a subscription Digital-SAT platform I run as a registered business (포커스 스튜디오). Students get practice that never repeats: every question is AI-generated, then human-vetted before it goes live. I own the whole surface — product, brand, copy, pricing, growth.</p>
+
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/fop_hero.png" alt="focusonprep.com live hero: dark navy page, eyebrow reading THE SAT REWARDS FOCUS, gradient headline Focus on Prep, Get started and See pricing buttons">
+      <figcaption>The live hero — eyebrow, headline, CTAs: every word mine.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/fop_pricing.png" alt="focusonprep.com pricing section: three plans from $33 to $49 per month with a one-week free trial">
+      <figcaption>Three tiers I designed and priced: $33–$49/mo, 1-week free trial.</figcaption>
+    </figure>
+  </div>
+
+  <ul class="ownlist">
+    <li><strong>Every word on the site</strong> — the hero (“The SAT rewards focus”), ten feature stories, pricing copy, and a comparison table that takes on Kaplan, Princeton Review, and UWorld directly.</li>
+    <li><strong>The AI content engine</strong> — generative AI mass-produces the question bank; a human-review gate keeps it trustworthy. “Always new, always vetted” isn't a slogan — it's the architecture.</li>
+    <li><strong>The positioning</strong> — “The big names sell a fixed bank — ours keeps growing.” (the comparison headline, live on the site)</li>
+  </ul>
+
+  <p class="minithesis"><span class="k">Why it matters here:</span> this is the Wordbricks thesis in miniature — take an intimidating AI capability and make it feel simple, trustworthy, and worth paying for. In the product, and in the copy that sells it.</p>
+</section>
+
+<!-- ================= SHEET 5 · FIT ================= -->
+<section class="sheet">
+  <div class="rail" aria-hidden="true"></div>
+  <span class="rail-node" style="top:64px" aria-hidden="true"></span>
+  <p class="eyebrow">04<span class="sep">/</span>The Fit</p>
+  <h2>Your job description is my last twelve months.</h2>
+
+  <blockquote class="jd">
+    <p class="ko">“글로벌 인지도를 높이기 위한 창의적인 콘텐츠를 영어로 기획하고 제작”</p>
+    <p class="en">“Plan and produce creative content in English to raise global awareness.”</p>
+    <p class="src">— Wordbricks · Brand Marketer JD</p>
+  </blockquote>
+
+  <div class="ledger">
+    <div class="ledger-row">
+      <div class="ask"><span class="tag">You ask</span>Creative content in English, for global awareness</div>
+      <div class="proof">Four months of English short-form for a US tech audience, made from Seoul — 46 shipped shorts for Blind's official channel.</div>
+    </div>
+    <div class="ledger-row">
+      <div class="ask"><span class="tag">You value</span>Speed over perfection</div>
+      <div class="proof">~3 shorts a week as a team of one, on an AI pipeline built for iteration: test, read the data, double down.</div>
+    </div>
+    <div class="ledger-row">
+      <div class="ask"><span class="tag">Your mission</span>Make AI feel like something anyone can use</div>
+      <div class="proof">GetGPT took 1M+ users from “AI is hard” to “I built my own tool.” Focus on Prep is my daily proof I can sell that exact story — I make an AI product feel simple and worth paying for.</div>
+    </div>
+  </div>
+
+  <p class="fit-close"><span class="q">“AI That Works Like You Think.”</span> I already market — and live — that promise. Let me tell it to the world in both of my native languages.</p>
+</section>
+
+<!-- ================= SHEET 6 · CLOSE ================= -->
+<section class="sheet sheet--dark close-sheet">
+  <div class="rail" aria-hidden="true"></div>
+  <span class="rail-end" style="bottom:56px" aria-hidden="true"></span>
+  <div>
+    <p class="eyebrow">Next<span class="sep">/</span>Let's talk</p>
+    <h2>Let's make AI <span class="b">worth talking about.</span></h2>
+    <p class="close-id">Woon Jae Na · Content Marketer · Bilingual EN / KO · Seoul</p>
+  </div>
+  <div>
+    <div class="close-contact">
+      <p class="row"><a href="mailto:wjna4216@gmail.com">wjna4216@gmail.com</a> <span class="dot">·</span> +82 10-7163-5363</p>
+      <p class="row"><a href="https://focusonprep.com">focusonprep.com</a> <span class="dot">·</span> <a href="https://www.youtube.com/@BlindApp">youtube.com/@BlindApp</a></p>
+    </div>
+    <p class="close-meta">Fittingly, this portfolio was designed and produced with an AI-assisted pipeline, too.</p>
+  </div>
+</section>
+
+<script>
+(function(){
+  if(!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.25});
+  document.querySelectorAll('.station').forEach(function(el){ el.classList.add('will-reveal'); io.observe(el); });
+})();
+</script>
+</body>
+</html>
