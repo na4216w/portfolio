@@ -259,18 +259,8 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
 .signoff{margin-top:36px}
 .signoff .sig{width:150px;mix-blend-mode:multiply;margin-bottom:2px}
 .signoff .who{font-family:var(--display);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.colophon{font-family:var(--sans);font-size:10.5px;color:rgba(20,20,20,.4);margin-top:22px;max-width:60ch}
 
-/* ---------- Sheet 6: Close ---------- */
-.close-sheet{display:flex;flex-direction:column;justify-content:space-between;min-height:560px}
-.close-sheet .eyebrow{color:var(--sky)}
-.close-sheet h2{font-size:44px;max-width:14em;color:#F0EDE7;margin-top:24px}
-.close-sheet h2 .b{color:var(--sky)}
-.close-id{font-size:16px;color:rgba(240,237,231,.72);margin-top:16px}
-.close-contact{border-top:1px solid rgba(240,237,231,.24);padding-top:22px}
-.close-contact .row{font-size:16.5px;margin-bottom:6px}
-.close-contact a{color:var(--sky);font-weight:600}
-.close-contact .dot{margin:0 9px;color:rgba(240,237,231,.3)}
-.close-meta{font-family:var(--sans);font-size:11px;color:rgba(240,237,231,.44);margin-top:26px}
 
 /* ---------- Reveal (screen-only, added by JS) ---------- */
 .will-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
@@ -295,7 +285,6 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--hairline)}
   .filmstrip{grid-template-columns:repeat(2,1fr)}
   .shots{grid-template-columns:1fr}
-  .close-sheet h2{font-size:30px}
 }
 
 /* ---------- Print: six A4 sheets ---------- */
@@ -343,11 +332,12 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   .callout p{font-size:12.5px}
   .frame figcaption{font-size:7.5px}
   .ownlist li{padding:2.6mm 0 2.6mm 22px}
-  .minithesis{font-size:13px}
-  .signoff{margin-top:8mm}
+  .minithesis{font-size:13px;padding:3.5mm 5mm}
+  .shots{margin:5mm 0 1.5mm}
+  .shot figcaption{font-size:10px;margin-top:2mm}
+  .signoff{margin-top:5mm}
+  .colophon{margin-top:3mm}
   .signoff .sig{width:125px}
-  .close-sheet{min-height:296mm}
-  .close-sheet h2{font-size:42px}
 }
 </style>
 </head>
@@ -499,26 +489,11 @@ p.lead{font-size:17.5px;line-height:1.62;max-width:60ch}
   <div class="signoff">
     <img class="sig" src="assets/woon_signature.jpg" alt="Handwritten signature reading WOON">
     <p class="who">Woon Jae Na · Seoul</p>
+    <p class="colophon">Fittingly, this portfolio was itself designed, written, and produced with an AI-assisted workflow, Claude Code included.</p>
   </div>
+  <span class="rail-end" style="bottom:48px" aria-hidden="true"></span>
 </section>
 
-<!-- ================= SHEET 6 · CLOSE ================= -->
-<section class="sheet sheet--dark close-sheet">
-  <div class="rail" aria-hidden="true"></div>
-  <span class="rail-end" style="bottom:56px" aria-hidden="true"></span>
-  <div>
-    <p class="eyebrow">In closing<span class="sep">·</span>Contact</p>
-    <h2>Making AI <span class="b">worth talking about.</span></h2>
-    <p class="close-id">Woon Jae Na · Content Marketer · Bilingual EN / KO · Seoul</p>
-  </div>
-  <div>
-    <div class="close-contact">
-      <p class="row"><a href="mailto:wjna4216@gmail.com">wjna4216@gmail.com</a> <span class="dot">·</span> +82 10-7163-5363</p>
-      <p class="row"><a href="https://focusonprep.com">focusonprep.com</a> <span class="dot">·</span> <a href="https://www.youtube.com/@BlindApp">youtube.com/@BlindApp</a></p>
-    </div>
-    <p class="close-meta">Fittingly, this portfolio was itself designed, written, and produced with an AI-assisted workflow, Claude Code included.</p>
-  </div>
-</section>
 
 <script>
 (function(){
